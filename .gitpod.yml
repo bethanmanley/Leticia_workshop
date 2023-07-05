@@ -1,27 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
   - init: |
-      python -m venv venv
-      source venv/bin/activate
-      pip install --upgrade pip wheel setuptools
-      pip install Django
-      python manage.py migrate
       conda init bash
-  - command: |
-      source venv/bin/activate
-      python manage.py runserver
 
-  - command: conda env update --file environment.yml
-    name: Install Conda environment
+  - command: conda env create --file environment.yml
+    name: Create Conda environment
 
-  - command: conda activate leticia
+  - command: conda activate my_environment
     name: Activate Conda environment
 
+  - command: python -m ipykernel install --user --name=my_environment
+    name: Install IPython kernel
 
-ports:
-  - port: 8000
-    visibility: private
-    onOpen: open-preview
-
-vscode:
-  extensions:
-    - ms-python.python
+  - command: jupyter lab --no-browser --port=8888
+    name: Run Jupyter Lab
