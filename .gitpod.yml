@@ -8,7 +8,7 @@ tasks:
   - command: |
       source venv/bin/activate
       python manage.py runserver
-  
+
 ports:
   - port: 8000
     visibility: private
@@ -17,3 +17,13 @@ ports:
 vscode:
   extensions:
     - ms-python.python
+
+tasks:
+  - init: |
+      conda init bash
+
+  - command: conda env update --file environment.yml
+    name: Install Conda environment
+
+  - command: conda activate <your_environment_name>
+    name: Activate Conda environment
