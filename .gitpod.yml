@@ -25,5 +25,5 @@ tasks:
   - command: conda env update --file environment.yml
     name: Install Conda environment
 
-  - command: conda activate <your_environment_name>
+  - command: conda activate leticia
     name: Activate Conda environment
