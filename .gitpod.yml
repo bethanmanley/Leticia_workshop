@@ -10,9 +10,3 @@ tasks:
 
   - command: conda activate leticia
     name: Activate Conda environment
-
-  - command: python -m ipykernel install --user --name=leticia
-    name: Install IPython kernel
-
-  - command: jupyter lab --no-browser --port=8888
-    name: Run Jupyter Lab
