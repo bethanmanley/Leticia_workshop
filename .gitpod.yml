@@ -8,5 +8,5 @@ tasks:
   - command: conda env create --file environment.yml
     name: Create Conda environment
 
-  - command: conda activate my_environment
+  - command: conda activate leticia
     name: Activate Conda environment
