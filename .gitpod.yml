@@ -5,9 +5,17 @@ tasks:
       pip install --upgrade pip wheel setuptools
       pip install Django
       python manage.py migrate
+      conda init bash
   - command: |
       source venv/bin/activate
       python manage.py runserver
+
+  - command: conda env update --file environment.yml
+    name: Install Conda environment
+
+  - command: conda activate leticia
+    name: Activate Conda environment
+
 
 ports:
   - port: 8000
@@ -17,13 +25,3 @@ ports:
 vscode:
   extensions:
     - ms-python.python
-
-tasks:
-  - init: |
-      conda init bash
-
-  - command: conda env update --file environment.yml
-    name: Install Conda environment
-
-  - command: conda activate leticia
-    name: Activate Conda environment
