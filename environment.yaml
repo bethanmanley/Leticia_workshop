@@ -1,0 +1,14 @@
+name: leticia
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - fastqc
+  - lotus2
+  # Add additional packages here as needed
