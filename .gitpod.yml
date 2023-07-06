@@ -9,36 +9,52 @@ tasks:
 
     source ${HOME}/.bashrc
 
-    mamba create -c -conda-forge -c bioconda --strict-channel-priority -n lotus2 lotus2
-    mamba create -c -conda-forge -c bioconda --strict-channel-priority -n fastqc fastqc
+    mamba create -n lotus2 -c conda-forge -c bioconda \
+      lotus2
 
     mamba clean --all -y
 
-    mamba install -n lotus2 -c conda-forge -c bioconda 
-    mamba install -n fastqc -c conda-forge -c bioconda 
+    mamba install -n lotus2 -c conda-forge -c bioconda \
+      lotus2
+
+    mamba clean --all -y
+
+    mamba activate lotus2
 
     cd /workspace
     git clone https://github.com/hildebra/lotus2
     cd lotus2
-
+    
     chmod +x ./lotus2
 
-    # set paths in Lotus2 Script
+    # set paths in Earl Grey Script
 
     echo "Setting path variables in script"
     SCRIPT_DIR=$(realpath ./scripts/)
     sed -i "s|SCRIPT_DIR=.*|SCRIPT_DIR=${SCRIPT_DIR}|g" ./lotus2
+    sed -i "s|SCRIPT_DIR=.*|SCRIPT_DIR=${SCRIPT_DIR}|g" ./configs/sdm_src*
+
     echo "Path variables set"
-    
+
+    echo "Installing sa-ssr"
+    cd ${SCRIPT_DIR} && chmod a+w ${SCRIPT_DIR}
+    git clone https://github.com/ridgelab/SA-SSR && cd ./SA-SSR/
+    sed -i "s|PREFIX=/usr/local/bin|PREFIX=${SCRIPT_DIR}|g" Makefile && make && make install
+    cd ${SCRIPT_DIR}
+
+    # Extract tRNAdb
+    echo "Extracting zip archives"
+    tar -zxf ${SCRIPT_DIR}/bin/LTR_FINDER.x86_64-1.0.7/tRNAdb.tar.gz --directory ${SCRIPT_DIR}/bin/LTR_FINDER.x86_64-1.0.7/
+    echo "Extracted required archives"
 
     # Message Complete
-    echo "Remember to activate the lotus2 conda environment before running lotus2"
+    echo "Remember to activate the lotus2 conda environment before running earlGrey"
     export PATH=$PATH:$(realpath .)
-    echo "Lotus2 is ready to use. To execute from any directory, add lotus2 to path by pasting the code (minus the square brackets) below..."
+    echo "earlGrey is ready to use. To execute from any directory, add earlGrey to path by pasting the code (minus the square brackets) below..."
     echo '[export PATH=$PATH:$(realpath .)]'
-    cd /workspace/lotus2
+    cd /workspace/EarlGrey
     export PATH=$PATH:$(realpath .)
-
+    export PERL5LIB=/workspace/conda/envs/earlGrey/share/RepeatMasker/:$PERL5LIB
 
   command: |
     /workspace/conda/bin/mamba init bash
@@ -46,6 +62,7 @@ tasks:
     mamba activate lotus2
     cd /workspace/lotus2
     export PATH=$PATH:$(realpath .)
+    export PERL5LIB=/workspace/conda/envs/lotus2
     cd /workspace
 
 # - name: install Dfam.h5.gz from alternate source
