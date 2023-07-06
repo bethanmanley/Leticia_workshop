@@ -30,6 +30,19 @@ tasks:
     sed -i "s|SCRIPT_DIR=.*|SCRIPT_DIR=${SCRIPT_DIR}|g" ./lotus2
     echo "Path variables set"
     
+    cd /workspace
+    git clone https://github.com/s-andrews/FastQC
+    cd fastQC
+
+    chmod +x ./fastqc
+
+    # set paths in fastqc Script
+
+    echo "Setting path variables in script"
+    SCRIPT_DIR=$(realpath ./scripts/)
+    sed -i "s|SCRIPT_DIR=.*|SCRIPT_DIR=${SCRIPT_DIR}|g" ./fastqc
+    echo "Path variables set"
+    
 
     # Message Complete
     echo "Remember to activate the lotus2 conda environment before running lotus2"
