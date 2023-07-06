@@ -1,12 +1,60 @@
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-base
 
 tasks:
-  - init: |
-      conda init bash
+- name: install mamba and lotus2 dependencies
+  init: |
+    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+    bash Mambaforge-$(uname)-$(uname -m).sh -b -p /workspace/conda && rm Mambaforge-$(uname)-$(uname -m).sh
+    /workspace/conda/bin/mamba init bash
 
-  - command: conda env create --file environment.yml
-    name: Create Conda environment
+    source ${HOME}/.bashrc
 
-  - command: conda activate leticia
-    name: Activate Conda environment
+    mamba create -c -conda-forge -c bioconda --strict-channel-priority -n lotus2 lotus2
+
+    mamba clean --all -y
+
+    mamba install -n lotus2 -c conda-forge -c bioconda 
+
+    mamba activate lotus2
+
+    cd /workspace
+    git clone https://github.com/hildebra/lotus2
+    cd lotus2
+
+    chmod +x ./lotus2
+
+    # set paths in Lotus2 Script
+
+    echo "Setting path variables in script"
+    SCRIPT_DIR=$(realpath ./scripts/)
+    sed -i "s|SCRIPT_DIR=.*|SCRIPT_DIR=${SCRIPT_DIR}|g" ./lotus2
+    echo "Path variables set"
+    
+
+    # Message Complete
+    echo "Remember to activate the lotus2 conda environment before running lotus2"
+    export PATH=$PATH:$(realpath .)
+    echo "Lotus2 is ready to use. To execute from any directory, add lotus2 to path by pasting the code (minus the square brackets) below..."
+    echo '[export PATH=$PATH:$(realpath .)]'
+    cd /workspace/lotus2
+    export PATH=$PATH:$(realpath .)
+
+
+  command: |
+    /workspace/conda/bin/mamba init bash
+    source ~/.bashrc
+    mamba activate lotus2
+    cd /workspace/lotus2
+    export PATH=$PATH:$(realpath .)
+    cd /workspace
+
+# - name: install Dfam.h5.gz from alternate source
+#   init: |
+#     sleep 100
+#     pkill wget
+#     curl http://dfam.cog.sanger.ac.uk/Dfam.h5.gz | zcat > /workspace/conda/env/earlGrey/share/RepeatMasker/Libraries/Dfam.h5
+
+github:
+  prebuilds:
+    master: true
+    branches: true
