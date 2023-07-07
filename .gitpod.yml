@@ -64,6 +64,7 @@ tasks:
     cd /workspace
 
   - name: install fastqc through conda
+  init: |
 
       mamba create -n fastqc -c conda-forge -c bioconda \
       fastqc
