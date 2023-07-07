@@ -56,6 +56,7 @@ tasks:
     export PATH=$PATH:$(realpath .)
     export PERL5LIB=/workspace/conda/envs/lotus2
     cd /workspace
+    mamba deactivate
 
 
 # - name: install Dfam.h5.gz from alternate source
