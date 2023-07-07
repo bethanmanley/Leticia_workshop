@@ -12,10 +12,16 @@ tasks:
     mamba create -n lotus2 -c conda-forge -c bioconda \
       lotus2
 
+    mamba create -n fastqc -c conda-forge -c bioconda \
+      fastqc
+    
     mamba clean --all -y
 
     mamba install -n lotus2 -c conda-forge -c bioconda \
       lotus2
+
+    mamba install -n fastqc -c conda-forge -c bioconda \
+      fastqc
 
     mamba clean --all -y
 
@@ -63,18 +69,6 @@ tasks:
     export PERL5LIB=/workspace/conda/envs/lotus2
     cd /workspace
 
-- name: install fastqc through conda
-  init: |
-
-    mamba create -n fastqc -c conda-forge -c bioconda \
-    fastqc
-
-    mamba clean --all -y
-
-    mamba install -n fastqc -c conda-forge -c bioconda \
-      fastqc
-
-    mamba clean --all -y
 
 # - name: install Dfam.h5.gz from alternate source
 #   init: |
