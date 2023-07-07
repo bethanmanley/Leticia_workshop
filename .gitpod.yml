@@ -63,11 +63,11 @@ tasks:
     export PERL5LIB=/workspace/conda/envs/lotus2
     cd /workspace
 
-  - name: install fastqc through conda
+- name: install fastqc through conda
   init: |
 
-      mamba create -n fastqc -c conda-forge -c bioconda \
-      fastqc
+    mamba create -n fastqc -c conda-forge -c bioconda \
+    fastqc
 
     mamba clean --all -y
 
