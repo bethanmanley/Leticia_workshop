@@ -13,7 +13,10 @@ tasks:
       lotus2
 
     mamba create -n fastqc -c conda-forge -c bioconda \
-      fastqc multiqc
+      fastqc 
+    
+    mamba create -n multiqc -c conda-forge -c bioconda \
+      multiqc 
     
     mamba clean --all -y
 
@@ -21,7 +24,10 @@ tasks:
       lotus2
 
     mamba install -n fastqc -c conda-forge -c bioconda \
-      fastqc multiqc
+      fastqc 
+
+    mamba install -n multiqc -c conda-forge -c bioconda \
+      multiqc 
 
     mamba clean --all -y
 
