@@ -1,0 +1,9 @@
+#SampleID	fastqFile	Sample_or_Control
+B1_ITS2	B1_ITS2_S127_R1_001.fastq.gz,B1_ITS2_S127_R2_001.fastq.gz	True Sample
+C-_ITS2	C-_ITS2_S160_R1_001.fastq.gz,C-_ITS2_S160_R2_001.fastq.gz	Control Sample
+La_Palma5_ITS2	La_Palma5_ITS2_S132_R1_001.fastq.gz,La_Palma5_ITS2_S132_R2_001.fastq.gz	True Sample
+Nuevo_Horizonte_ITS2	Nuevo_Horizonte_ITS2_S142_R1_001.fastq.gz,Nuevo_Horizonte_ITS2_S142_R2_001.fastq.gz	True Sample
+Pcf2_ITS2	Pcf2_ITS2_s_R1_001.fastq.gz,Pcf2_ITS2_s_R2_001.fastq.gz	True Sample
+Pcov3_ITS2	Pcov3_ITS2_S151_R1_001.fastq.gz,Pcov3_ITS2_S151_R2_001.fastq.gz	True Sample
+Santa_Barb2_ITS2	Santa_Barb2_ITS2_S156_R1_001.fastq.gz,Santa_Barb2_ITS2_S156_R2_001.fastq.gz	True Sample
+pcov1_ITS2	pcov1_ITS2_s_R1_001.fastq.gz,pcov1_ITS2_s_R2_001.fastq.gz	True Sample
