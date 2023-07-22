@@ -1,0 +1,12 @@
+#SampleID	fastqFile	Sample_or_Control
+B1_ITS2	B1_ITS2_S127_R1_001.fastq.gz,B1_ITS2_S127_R2_001.fastq.gz	True Sample
+C-_ITS2	C-_ITS2_S160_R1_001.fastq.gz,C-_ITS2_S160_R2_001.fastq.gz	Control Sample
+Gambita_1_ITS2	Gambita_1_ITS2_S_R1_001.fastq.gz,Gambita_1_ITS2_S_R2_001.fastq.gz	True Sample
+La_Palma5_ITS2	La_Palma5_ITS2_S_R1_001.fastq.gz,La_Palma5_ITS2_S_R2_001.fastq.gz	True Sample
+N11_ITS2	N11_ITS2_S134_R1_001.fastq.gz,N11_ITS2_S134_R2_001.fastq.gz	True Sample
+N5_ITS2	N5_ITS2_S140_R1_001.fastq.gz,N5_ITS2_S140_R2_001.fastq.gz	True Sample
+Pcf1_ITS2	Pcf1_ITS2_S_R1_001.fastq.gz,Pcf1_ITS2_S_R2_001.fastq.gz	True Sample
+Pcf2_ITS2	Pcf2_ITS2_S_R1_001.fastq.gz,Pcf2_ITS2_S_R2_001.fastq.gz	True Sample
+Pcov3_ITS2	Pcov3_ITS2_S151_R1_001.fastq.gz,Pcov3_ITS2_S151_R2_001.fastq.gz	True Sample
+San_Isidro_ITS2	San_Isidro_ITS2_S_R1_001.fastq.gz,San_Isidro_ITS2_S_R2_001.fastq.gz	True Sample
+Santa_BarbT1_ITS2	Santa_BarbT1_ITS2_S157_R1_001.fastq.gz,Santa_BarbT1_ITS2_S157_R2_001.fastq.gz	True Sample
