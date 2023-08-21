@@ -1,0 +1,18 @@
+vsearch v2.23.0_linux_x86_64, 62.8GB RAM, 16 cores
+/workspace/conda/envs/lotus2/bin/vsearch -uchime_denovo lotus2_results/tmpFiles//otu_seeds.fna -chimeras lotus2_results/ExtraFiles//chimeras_denovo.fa -nonchimeras lotus2_results/tmpFiles//tmp1.fa -abskew 2 -log lotus2_results/LotuSLogS//chimera_dn.log
+Started  Mon Aug 21 10:27:07 2023
+673213 nt in 2207 seqs, min 198, max 544, avg 305
+
+    0.28  minh
+    8.00  xn
+    1.40  dn
+    1.00  xa
+    0.80  mindiv
+    0.55  id
+       2  maxp
+
+lotus2_results/tmpFiles//otu_seeds.fna: 0/2207 chimeras (0.0%)
+
+Finished Mon Aug 21 10:27:07 2023
+Elapsed time 00:00
+Max memory 10.0MB

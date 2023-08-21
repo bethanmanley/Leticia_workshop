@@ -1,0 +1,825 @@
+
+This is sdm (simple demultiplexer) 2.06 beta.
+
+Checking for switched pairs.
+Run with 1 cores.At 4robles_ITS2_S_R1_001.fastq.gz: 74.8781% of 224999 reads accepted (96.7209% end-trimmed)
+Pair 2: 47.0495% of 224999 reads accepted (88.8382% end - trimmed)
+At C-_ITS2_S160_R1_001.fastq.gz: 2.67857% of 2240 reads accepted (97.5446% end-trimmed)
+Pair 2: 2.00893% of 2240 reads accepted (96.8304% end - trimmed)
+At Gambita_1_ITS2_S_R1_001.fastq.gz: 75.6296% of 174999 reads accepted (96.0537% end-trimmed)
+Pair 2: 46.83% of 174999 reads accepted (87.5194% end - trimmed)
+At La_Palma5_ITS2_S_R1_001.fastq.gz: 72.381% of 174999 reads accepted (96.0674% end-trimmed)
+Pair 2: 51.4529% of 174999 reads accepted (91.0148% end - trimmed)
+At N5_ITS2_S140_R1_001.fastq.gz: 77.1367% of 161158 reads accepted (96.0498% end-trimmed)
+Pair 2: 54.3603% of 161158 reads accepted (90.8134% end - trimmed)
+At Nuevo_Horizonte_ITS2_S_R1_001.fastq.gz: 78.1444% of 199999 reads accepted (96.565% end-trimmed)
+Pair 2: 49.9263% of 199999 reads accepted (92.358% end - trimmed)
+At Pcf1_ITS2_S_R1_001.fastq.gz: 73.7314% of 199999 reads accepted (96.1795% end-trimmed)
+Pair 2: 49.3322% of 199999 reads accepted (88.6689% end - trimmed)
+At Pcov3_ITS2_S151_R1_001.fastq.gz: 74.6491% of 97598 reads accepted (96.3012% end-trimmed)
+Pair 2: 55.8188% of 97598 reads accepted (92.4927% end - trimmed)
+At San_Isidro_ITS2_S_R1_001.fastq.gz: 71.0061% of 174999 reads accepted (95.2417% end-trimmed)
+Pair 2: 53.6397% of 174999 reads accepted (92.0868% end - trimmed)
+At Santa_BarbT1_ITS2_S157_R1_001.fastq.gz: 69.5008% of 199982 reads accepted (95.7071% end-trimmed)
+Pair 2: 60.5264% of 199982 reads accepted (92.9289% end - trimmed)
+Evaluating and writing dereplicated reads..
+
+Dereplication: 6,940 unique sequences (avg size 1.2e+02; 856,701 counts)
+45,701/52,641 not passing derep conditions (70,418 counts; 8:1,4:2,3:3)
+
+sdm 2.06 beta
+Input File:  several
+Output File: lotus2_results/tmpFiles//demulti.1.fna
+
+Reads processed: 1,610,972; 1,610,972 (pair 1;pair 2)
+1536;1536 reads reverse-translated, 1387 read pairs swapped
+Rejected: 419,253; 777,561
+Accepted (High qual): 833,720; 833,410 (62,620; 150,817 end-trimmed)
+Accepted (Mid qual): 357,999;1
+Singletons among these: 0; 0
+Bad Reads recovered with dereplication: 93,399
+Min/Avg/Max stats Pair 1
+     - sequence Length : 200/200/200
+     - Quality :   28/32.9037/34
+     - Median sequence Length : 0, Quality : 0
+     - Accum. Error 0.204802
+Trimmed due to:
+  > 25 avg qual_ in 20 bp windows :         0; 0
+  > (0.95) acc. errors, trimmed seqs :     0; 0
+Rejected due to:
+  < min Sequence length (200)  :                172,193; 661,640
+       -after Quality trimming :           172,193; 661,640
+  < avg Quality (27)  :                    0; 0
+  < window (50 nt) avg. Quality (25)  :    5; 7
+  > max Sequence length (1000)  :               0; 0
+  > (8) homo-nt run  :                     108,444; 54,474
+  > (0) amb. Bases  :                      18,213; 61,447
+  > (2.7) binomial est. errors :           120,403; 0
+Specific sequence searches:
+  -With fwd Primer remaining (<= 0 mismatches, required) : 0; 0
+  -With rev Primer remaining (<= 0 mismatches) :           0; 0
+  -Barcode unidentified (max 0 errors) :                   0
+
+SampleID	Barcode	Instances
+4robles_ITS2		129,869
+C-_ITS2		22
+Gambita_1_ITS2		99,571
+La_Palma5_ITS2		102,875
+N5_ITS2		115,617
+Nuevo_Horizonte_ITS2		92,149
+Pcf1_ITS2		85,474
+Pcov3_ITS2		59,050
+San_Isidro_ITS2		120,576
+Santa_BarbT1_ITS2		121,916
+Time taken: : 34s 609ms
+vsearch v2.23.0_linux_x86_64, 62.8GB RAM, 16 cores
+https://github.com/torognes/vsearch
+
+Reading file lotus2_results/tmpFiles//derep.fas 100%
+1388000 nt in 6940 seqs, min 200, max 200, avg 200
+Masking 100%
+Sorting by abundance 100%
+Counting k-mers 100%
+Clustering 100%
+Sorting clusters 100%
+Writing clusters 100%
+Clusters: 2059 Size min 3, max 93928, avg 3.4
+Singletons: 0, 0.0% of seqs, 0.0% of clusters
+Multiple alignments 100%
+[M::mm_idx_gen::0.011*1.09] collected minimizers
+[M::mm_idx_gen::0.016*1.06] sorted minimizers
+[M::main::0.016*1.06] loaded/built the index for 2059 target sequence(s)
+[M::mm_mapopt_update::0.016*1.06] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 2059
+[M::mm_idx_stat::0.017*1.06] distinct minimizers: 31344 (86.17% are singletons); average occurrences: 1.875; average spacing: 7.006; total length: 411777
+[M::worker_pipeline::108.529*1.00] mapped 250000 sequences
+[M::worker_pipeline::152.378*1.00] mapped 107998 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /workspace/conda/envs/lotus2/bin/minimap2 -x sr --sr -u both --secondary=no -N 30 -c -t 1 -o lotus2_results/tmpFiles//add.paf lotus2_results/tmpFiles//tmp_otu.fa lotus2_results/tmpFiles//demulti.1.add.fna.singl
+[M::main] Real time: 152.381 sec; CPU: 152.348 sec; Peak RSS: 0.542 GB
+
+This is sdm (simple demultiplexer) 2.06 beta.
+
+You did not supply a quality file. 
+Please give the path to your quality file as command line argument:
+  -i_qual <PathToQualityFile>
+NO filtering will be done on your reads (just rewriting / log files created).
+sdm run in No Map Mode.
+sequence filename: lotus2_results/tmpFiles//derep.fas.rest
+quality filename: 
+ 
+
+Reading Fasta.
+success
+Run with 1 cores.sequence filename: lotus2_results/tmpFiles//derep.fas.rest
+quality filename: 
+ 
+
+Reading Fasta.
+success
+
+*********
+Warning:: Quality file is not present.
+Recommended to abort demultiplexing.
+*********
+
+sdm 2.06 beta
+Input File:  lotus2_results/tmpFiles//derep.fas.rest
+Output File: lotus2_results/tmpFiles//derep.fas.rest1
+No valid Filter file provided; no filtering done on files
+Time taken: : 215ms
+[M::mm_idx_gen::0.011*1.08] collected minimizers
+[M::mm_idx_gen::0.017*1.05] sorted minimizers
+[M::main::0.017*1.05] loaded/built the index for 2059 target sequence(s)
+[M::mm_mapopt_update::0.017*1.05] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 2059
+[M::mm_idx_stat::0.018*1.05] distinct minimizers: 31344 (86.17% are singletons); average occurrences: 1.875; average spacing: 7.006; total length: 411777
+[M::worker_pipeline::25.121*1.00] mapped 45701 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /workspace/conda/envs/lotus2/bin/minimap2 -x sr --sr -u both --secondary=no -N 30 -c -t 1 -o lotus2_results/tmpFiles//rests.paf lotus2_results/tmpFiles//tmp_otu.fa lotus2_results/tmpFiles//derep.fas.rest
+[M::main] Real time: 25.123 sec; CPU: 25.121 sec; Peak RSS: 0.103 GB
+
+This is sdm (simple demultiplexer) 2.06 beta.
+
+Checking for switched pairs.
+sdm run in No Map Mode. Using paired end sequencing files.
+Reading Fasta.
+Run with 1 cores.At lotus2_results/tmpFiles//derep.1.hq.fq: Associated 878974, 856701 counts to primary clusters
+Found 927119 counts in derep.map, 48145 counts secondary
+Reading lotus2_results/tmpFiles//finalOTU.ADD.paf
+Added 291772 counts from uc add file
+Reading lotus2_results/tmpFiles//finalOTU.REST.paf
+Added 38689 counts from uc add file
+Found 2059 seeds of 2059 OTU's in 388798 mappings.
+Stats of Seed sequences (0th/10th/50th/90th/100th) percentile:
+
+     - Sequence Length :   198/287/355/560/580
+     - Quality :      27.4298/32.0227/36.4016/39.3131/40
+     - Accum. Error : 0.024/0.0455414/0.339119/3.18579/10.4983
+     - Sim2Consensus: 0/0/0/100/100
+Writing OTU matrix to lotus2_results/OTU.txt
+Recruited 1206069 reads in OTU matrix
+Done
+Time taken: : 1s 85ms
+vsearch v2.23.0_linux_x86_64, 62.8GB RAM, 16 cores
+https://github.com/torognes/vsearch
+
+Reading file lotus2_results/tmpFiles//otu_seeds.fna 100%
+673213 nt in 2207 seqs, min 198, max 544, avg 305
+Masking 100%
+Sorting by abundance 100%
+Counting k-mers 100%
+Detecting chimeras 100%
+Found 0 (0.0%) chimeras, 2207 (100.0%) non-chimeras,
+and 0 (0.0%) borderline sequences in 2207 unique sequences.
+Taking abundance information into account, this corresponds to
+0 (0.0%) chimeras, 2207 (100.0%) non-chimeras,
+and 0 (0.0%) borderline sequences in 2207 total sequences.
+vsearch v2.23.0_linux_x86_64, 62.8GB RAM, 16 cores
+https://github.com/torognes/vsearch
+
+Reading file /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//ITS_chimera/ITS1_ITS2_datasets/uchime_sh_refs_dynamic_develop_985_11.03.2015.ITS2.fasta
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 14516.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 14516.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 14518.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 14518.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19552.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19552.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 151 (0x97) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 151 (0x97) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 43888.
+ 100%
+4834733 nt in 22108 seqs, min 80, max 1353, avg 219
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Detecting chimeras 100%
+Found 13 (0.6%) chimeras, 2194 (99.4%) non-chimeras,
+and 0 (0.0%) borderline sequences in 2207 unique sequences.
+Taking abundance information into account, this corresponds to
+13 (0.6%) chimeras, 2194 (99.4%) non-chimeras,
+and 0 (0.0%) borderline sequences in 2207 total sequences.
+ITSx -- Identifies ITS sequences and extracts the ITS region
+by Johan Bengtsson-Palme et al., University of Gothenburg
+Version: 1.1.3
+-----------------------------------------------------------------
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+WARNING!! This input file contains sequences with identical identifiers.
+These will likely overwrite each other in the output.
+Please replace non-unique identifiers with unique ones and rerun ITSx!
+Mon Aug 21 10:27:54 2023 : Parallel HMM-scan finished.
+[M::mm_idx_gen::0.001*1.71] collected minimizers
+[M::mm_idx_gen::0.002*1.58] sorted minimizers
+[M::main::0.002*1.57] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.002*1.57] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.002*1.55] distinct minimizers: 900 (100.00% are singletons); average occurrences: 1.000; average spacing: 5.984; total length: 5386
+[M::worker_pipeline::0.014*1.07] mapped 2194 sequences
+[M::main] Version: 2.26-r1175
+[M::main] CMD: /workspace/conda/envs/lotus2/bin/minimap2 -x sr --sr -u both --secondary=no -N 30 -c -t 1 -o lotus2_results/tmpFiles//otu_seeds.fna.phiX.0.cont_hit.paf /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//phiX.fasta lotus2_results/tmpFiles//otu_seeds.fna
+[M::main] Real time: 0.014 sec; CPU: 0.015 sec; Peak RSS: 0.004 GB
+
+
+Building a new DB, current time: 08/21/2023 10:27:56
+New DB name:   /workspace/conda/envs/lotus2/share/lotus2-2.25-0/DB/UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta
+New DB title:  /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 125635 sequences in 1.75411 seconds.
+
+
+Least common ancestor (LCA) assignments ver 0.24
+Loading tax DB../workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_taxonomy_qiime_ver8_99_s_all_02.02.2019.txt
+0 of 125635 are duplicate entries
+TaxDB /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_taxonomy_qiime_ver8_99_s_all_02.02.2019.txt contained 125635 entries, depth distribution is:
+0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:125635 
+Done Blast File reading
+Wrote 1595/1766 LCA tax assignments
+LCA finished. Time taken: 0.59s
+Ignored unknown character n (seen 169 times)
+
+Creating Phyloseq object ...
+Read 7 items
+WARNING: Phyloseq doesn't recognize sample names starting with a number. Some of the sample names start with a number.."S_" is added into beginning of these sample names.
+Phyloseq object is created: phyloseq.Rdata

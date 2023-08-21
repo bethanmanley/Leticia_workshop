@@ -1,0 +1,14 @@
+OTU	4robles_ITS2	C-_ITS2	Gambita_1_ITS2	La_Palma5_ITS2	N5_ITS2	Nuevo_Horizonte_ITS2	Pcf1_ITS2	Pcov3_ITS2	San_Isidro_ITS2	Santa_BarbT1_ITS2
+Chim.1	0	0	5	0	0	3	0	0	0	0
+Chim.2	0	0	0	4	0	0	0	0	0	7
+Chim.3	8	0	0	0	0	14	0	0	0	0
+Chim.4	0	0	21	0	0	0	0	0	0	0
+Chim.5	5	0	0	0	3	0	2	0	39	0
+Chim.6	2	0	9	9	45	5	0	0	0	258
+Chim.7	2	0	9	0	0	1	1	0	0	0
+Chim.8	15	0	0	0	7	10	14	13	15	0
+Chim.9	0	0	39	7	0	5	0	0	0	0
+Chim.10	0	0	107	4	0	4	0	0	0	0
+Chim.11	0	0	0	0	0	0	0	0	0	34
+Chim.12	0	0	0	813	0	0	0	0	0	0
+Chim.13	1	0	1	0	0	2	51	0	0	0

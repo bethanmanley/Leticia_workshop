@@ -1,0 +1,44 @@
+sdm 2.06 beta
+Input File:  several
+Output File: lotus2_results/tmpFiles//demulti.1.fna
+
+Reads processed: 1,610,972; 1,610,972 (pair 1;pair 2)
+1536;1536 reads reverse-translated, 1387 read pairs swapped
+Rejected: 419,253; 777,561
+Accepted (High qual): 833,720; 833,410 (62,620; 150,817 end-trimmed)
+Accepted (Mid qual): 357,999;1
+Singletons among these: 0; 0
+Bad Reads recovered with dereplication: 93,399
+Min/Avg/Max stats Pair 1
+     - sequence Length : 200/200/200
+     - Quality :   28/32.9/34
+     - Median sequence Length : 0, Quality : 0
+     - Accum. Error 0.205
+Trimmed due to:
+  > 25 avg qual_ in 20 bp windows :         0; 0
+  > (0.95) acc. errors, trimmed seqs :     0; 0
+Rejected due to:
+  < min Sequence length (200)  :                172,193; 661,640
+       -after Quality trimming :           172,193; 661,640
+  < avg Quality (27)  :                    0; 0
+  < window (50 nt) avg. Quality (25)  :    5; 7
+  > max Sequence length (1000)  :               0; 0
+  > (8) homo-nt run  :                     108,444; 54,474
+  > (0) amb. Bases  :                      18,213; 61,447
+  > (2.7) binomial est. errors :           120,403; 0
+Specific sequence searches:
+  -With fwd Primer remaining (<= 0 mismatches, required) : 0; 0
+  -With rev Primer remaining (<= 0 mismatches) :           0; 0
+  -Barcode unidentified (max 0 errors) :                   0
+
+SampleID	Barcode	Instances
+4robles_ITS2		129,869
+C-_ITS2		22
+Gambita_1_ITS2		99,571
+La_Palma5_ITS2		102,875
+N5_ITS2		115,617
+Nuevo_Horizonte_ITS2		92,149
+Pcf1_ITS2		85,474
+Pcov3_ITS2		59,050
+San_Isidro_ITS2		120,576
+Santa_BarbT1_ITS2		121,916

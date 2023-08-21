@@ -1,0 +1,42 @@
+sdm 2.06 beta
+Input File:  several
+Output File: lotus2_results/tmpFiles//demulti.1.fna
+
+Reads not High qual_: 0
+Rejected:0
+Accepted (High qual): 0 (0 end-trimmed)
+Accepted (Mid qual): 0
+Singletons among these: 0; 0
+Bad Reads recovered with dereplication: 0
+Min/Avg/Max stats Pair 1
+     - sequence Length : 0/0/0
+     - Quality :   0/0/0
+     - Median sequence Length : 0, Quality : 0
+     - Accum. Error 0.218
+Trimmed due to:
+  > 25 avg qual_ in 20 bp windows :          0
+  > (-1) acc. errors, trimmed seqs :       0
+Rejected due to:
+  < min Sequence length (200)  :                0
+  < avg Quality (20)  :                    0
+  < window (50 nt) avg. Quality (25)  :    0
+  > max Sequence length (1000)  :               0
+  > (8) homo-nt run  :                     0
+  > (1) amb. Bases  :                      0
+  > (2.7) binomial est. errors :           0
+Specific sequence searches:
+  -With fwd Primer remaining (<= 0 mismatches, required) : 0
+  -With rev Primer remaining (<= 0 mismatches) :           0
+  -Barcode unidentified (max 0 errors) :                   0
+
+SampleID	Barcode	Instances
+4robles_ITS2		0
+C-_ITS2		0
+Gambita_1_ITS2		0
+La_Palma5_ITS2		0
+N5_ITS2		0
+Nuevo_Horizonte_ITS2		0
+Pcf1_ITS2		0
+Pcov3_ITS2		0
+San_Isidro_ITS2		0
+Santa_BarbT1_ITS2		0

@@ -1,0 +1,141 @@
+No sdm Option specified, using standard miSeq sdm options: /workspace/conda/envs/lotus2/share/lotus2-2.25-0/configs/sdm_miSeq.txt
+--------------------------------------------------------------------------------
+ 00:00:00 ______       _____       ________  ___ 
+          ___  / ________  /____  ___  ___/ |__ \
+          __  /  _  __ \  __/  / / /____ \  __/ /
+          _  /___/ /_/ / /_ / /_/ /____/ / / __/ 
+          /_____/\____/\__/ \__,_/ /____/ /____/ 
+                                                 
+          LotuS 2.25
+          COMMAND
+          perl /workspace/conda/envs/lotus2/bin/lotus2 -i Leticia_workshop/Leticia_data
+          -o lotus2_results -m Leticia_workshop/Leticia_data/Mapping.txt
+          -refDB UNITE -amplicon_type ITS2 -LCA_idthresh 97,95,93,91,88,78,0
+          -tax_group fungi -taxAligner blast -forwardPrimer GCATCGATGAAGAACGCAGC
+          -reversePrimer TCCTCCGCTTATTGATATGC -clustering vsearch
+          -derepMin 8:1,4:2,3:3 -id 0.97
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:00:00 Reading mapping file
+          Sequence files are indicated in mapping file.
+          Switching to paired end read mode
+--------------------------------------------------------------------------------
+------------ I/O configuration --------------
+Input       Leticia_workshop/Leticia_data
+Output      lotus2_results
+SDM options /workspace/conda/envs/lotus2/share/lotus2-2.25-0/configs/sdm_miSeq.txt
+TempDir     lotus2_results/tmpFiles/
+------------ Configuration LotuS --------------
+de novo sequence clustering with Vsearch into OTU's
+Sequencing platform     miseq
+Amplicon target         fungi, ITS
+Dereplication filter    8:1,4:2,3:3
+Clustering algorithm    Vsearch into OTU's
+Read mapping to OTU     minimap2, at 0.97 %id cutoff
+Precluster read merging No
+Ref Chimera checking    Yes (DB=/workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//ITS_chimera/ITS1_ITS2_datasets/uchime_sh_refs_dynamic_develop_985_11.03.2015.ITS2.fasta, -chim_skew 2)
+deNovo Chimera check    Yes
+Tax assignment          Blast (-LCA_frac 0.8, -LCA_cover 0.5, -LCA_idthresh 97,95,93,91,88,78,0)
+ReferenceDatabase       UNITE
+RefDB location          /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta
+OTU phylogeny           Yes (mafft, fasttree2)
+Unclassified OTU's      Kept in matrix
+ITSx check              Yes
+--------------------------------------------
+--------------------------------------------------------------------------------
+ 00:00:00 Demultiplexing, filtering, dereplicating input files, this
+          might take some time..
+          check progress at lotus2_results/LotuSLogS/LotuS_progout.log
+ 00:00:35 Finished primary read processing with sdm:
+          Reads processed: 1,610,972; 1,610,972 (pair 1;pair 2)
+          Accepted (High qual): 833,720; 833,410 (62,620; 150,817 end-trimmed)
+          Accepted (Mid qual): 357,999;1
+          Rejected: 419,253; 777,561
+          Dereplication block 0: 6,940 unique sequences (avg size
+          1.2e+02; 856,701 counts)
+          For an extensive report see lotus2_results/LotuSLogS//demulti.log
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:00:35 VSEARCH OTU clustering
+           Cluster at 97
+ 00:00:36 Finished
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:00:36 Starting backmapping of 
+            - low-abundant dereplicated Reads
+            - mid-quality reads
+          to OTU's using minimap2 at >= 0.97 identity.
+ 00:03:34 Backmapping  mid qual reads: 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:03:34 Extending and merging pairs of OTU Seeds
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:03:35 Found 2207 fasta seed sequences based on seed extension
+          and read merging
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:03:35 De novo chimera filter using vsearch uchime
+          Total removed OTUs: (0/2207)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:03:38 Ref chimera filter using vsearch uchime_ref
+          Total removed OTUs: (13/2207)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:04:23 ITSx analysis: Kept 1774, deleted 272 OTU's identified as
+          ITS1,ITS2 (of 2046 OTU's).
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:04:23 Found contaminated 0 OTU's using minimap2 (phiX.0: /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//phiX.fasta)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:04:23 Postfilter:
+          Chimeras: 13 chimeric found (1594 reads)
+          Extended logs active, contaminant and chimeric matrix will be created.
+          Contaminants: ITSx.: 272 OTU's removed (57330 reads); 
+          After filtering 1774 OTU's (1147145 reads) remaining in matrix.
+--------------------------------------------------------------------------------
+Creating Blast formated reference, this may take awhile..
+--------------------------------------------------------------------------------
+ 00:04:26 Assigning taxonomy against /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta
+          using BLAST
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 00:11:59 Calculating Taxonomic Abundance Tables from UNITE assignments
+--------------------------------------------------------------------------------
+
+Calculating higher abundance levels
+Adding 179 unclassified OTU's to output matrices
+Total reads in matrix: 1147145
+TaxLvl	%Assigned_Reads	%Assigned_OTUs
+Phylum	94	85
+Class	91	70
+Order	84	70
+Family	72	66
+Genus	63	58
+Species	50	48
+
+--------------------------------------------------------------------------------
+ 00:11:59 Building tree (fasttree) and aligning (mafft) OTUs
+--------------------------------------------------------------------------------
+WARNING:: Phylogenies for ITS amplicons may be inaccurate and should be used with caution.
+--------------------------------------------------------------------------------
+ 00:20:29 LotuS2 finished. Output in:
+          lotus2_results
+                    Next steps:          
+          - Phyloseq: load lotus2_results/phyloseq.Rdata directly
+          with the phyloseq package in R
+          - Phylogeny: OTU phylogentic tree available in lotus2_results/OTUphylo.nwk
+          - .biom: lotus2_results/OTU.biom contains biom formatted output
+          - Alpha diversity/rarefaction curves: rtk (available as
+          R package or in bin/rtk)
+          - LotuSLogS/ contains run statistics (useful for describing
+          data/amount of reads/quality and citations to programs used
+          - Tutorial: Visit http://lotus2.earlham.ac.uk for a numerical
+          ecology tutorial
+--------------------------------------------------------------------------------
+
+The following WARNINGS occured:
+WARNING:: Phylogenies for ITS amplicons may be inaccurate and should be used with caution.
+

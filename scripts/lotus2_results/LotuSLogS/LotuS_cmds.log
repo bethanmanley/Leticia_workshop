@@ -1,0 +1,43 @@
+[cmd] rm -f -r lotus2_results/tmpFiles/
+[cmd] mkdir -p lotus2_results/tmpFiles/
+[cmd] cp /workspace/conda/envs/lotus2/share/lotus2-2.25-0/configs/sdm_miSeq.txt lotus2_results/primary
+[cmd] /workspace/conda/envs/lotus2/bin/sdm  -i_path Leticia_workshop/Leticia_data  -o_fna lotus2_results/tmpFiles//demulti.1.fna,lotus2_results/tmpFiles//demulti.2.fna  -o_fna2 lotus2_results/tmpFiles//demulti.1.add.fna,lotus2_results/tmpFiles//demulti.2.add.fna  -sample_sep ___  -log lotus2_results/LotuSLogS//demulti.log -map lotus2_results/primary/in.map   -options /workspace/conda/envs/lotus2/share/lotus2-2.25-0/configs/sdm_miSeq.txt    -o_dereplicate lotus2_results/tmpFiles//derep.fas -dere_size_fmt 0 -min_derep_copies 8:1,4:2,3:3 -suppressOutput 1   -o_qual_offset 33 -paired 2  -oneLineFastaFormat 1   -threads 1 
+[cmd] mkdir -p lotus2_results/LotuSLogS//SDMperFile/
+[cmd]  mv lotus2_results/LotuSLogS//demulti.log0* lotus2_results/LotuSLogS//SDMperFile/
+[cmd] tar zcf lotus2_results/LotuSLogS//SDMperFile.tar.gz lotus2_results/LotuSLogS//SDMperFile/
+[cmd]  rm -r lotus2_results/LotuSLogS//SDMperFile/
+[cmd] rm -f lotus2_results/tmpFiles//finalOTU.uc lotus2_results/tmpFiles//finalOTU.ADD.paf lotus2_results/tmpFiles//finalOTU.ADDREF.paf lotus2_results/tmpFiles//finalOTU.REST.paf lotus2_results/tmpFiles//finalOTU.RESTREF.paf
+[cmd] /workspace/conda/envs/lotus2/bin/vsearch --cluster_size lotus2_results/tmpFiles//derep.fas --id 0.97 --sizein --strand both --consout lotus2_results/tmpFiles//tmp_otu.fa --sizeout --uc lotus2_results/tmpFiles//finalOTU.uc
+[cmd] /workspace/conda/envs/lotus2/bin/minimap2  -x sr --sr -u both --secondary=no -N 30 -c  -t 1 -o lotus2_results/tmpFiles//add.paf lotus2_results/tmpFiles//tmp_otu.fa lotus2_results/tmpFiles//demulti.1.add.fna.singl 
+[cmd] cat lotus2_results/tmpFiles//add.paf >> lotus2_results/tmpFiles//finalOTU.ADD.paf
+[cmd] /workspace/conda/envs/lotus2/bin/sdm -i lotus2_results/tmpFiles//derep.fas.rest -o_fna lotus2_results/tmpFiles//derep.fas.rest1
+[cmd] rm -f lotus2_results/tmpFiles//derep.fas.rest
+[cmd] mv lotus2_results/tmpFiles//derep.fas.rest1 lotus2_results/tmpFiles//derep.fas.rest
+[cmd] /workspace/conda/envs/lotus2/bin/minimap2  -x sr --sr -u both --secondary=no -N 30 -c  -t 1 -o lotus2_results/tmpFiles//rests.paf lotus2_results/tmpFiles//tmp_otu.fa lotus2_results/tmpFiles//derep.fas.rest 
+[cmd] cat lotus2_results/tmpFiles//rests.paf >> lotus2_results/tmpFiles//finalOTU.REST.paf
+[cmd] /workspace/conda/envs/lotus2/bin/sdm -i_fastq lotus2_results/tmpFiles//derep.1.hq.fq,lotus2_results/tmpFiles//derep.2.hq.fq -o_fastq lotus2_results/tmpFiles//otu_seeds.1.fq,lotus2_results/tmpFiles//otu_seeds.2.fq -uparseVer vsearch  -optimalRead2Cluster lotus2_results/tmpFiles//finalOTU.uc  -paired 2 -sample_sep ___ -derep_map lotus2_results/tmpFiles//derep.map -options /workspace/conda/envs/lotus2/share/lotus2-2.25-0/configs/sdm_miSeq.txt -merge_pairs_seed 1   -o_qual_offset 33 -mergedPairs 0 -log lotus2_results/LotuSLogS//SeedExtensionStats.txt  -OTU_fallback lotus2_results/tmpFiles//tmp_otu.fa -ucAdditionalCounts lotus2_results/tmpFiles//finalOTU.ADD.paf -ucAdditionalCounts1 lotus2_results/tmpFiles//finalOTU.REST.paf -otu_matrix lotus2_results/OTU.txt -id 97 -minQueryCov 0.8  -count_chimeras F 
+[cmd] /workspace/conda/envs/lotus2/bin/vsearch -uchime_denovo lotus2_results/tmpFiles//otu_seeds.fna -chimeras lotus2_results/ExtraFiles//chimeras_denovo.fa -nonchimeras lotus2_results/tmpFiles//tmp1.fa -abskew 2 -log lotus2_results/LotuSLogS//chimera_dn.log
+[cmd] 
+rm -f lotus2_results/tmpFiles//otu_seeds.fna
+mv -f lotus2_results/tmpFiles//tmp1.fa lotus2_results/tmpFiles//otu_seeds.fna
+[cmd] /workspace/conda/envs/lotus2/bin/vsearch -uchime_ref  lotus2_results/tmpFiles//otu_seeds.fna -db /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//ITS_chimera/ITS1_ITS2_datasets/uchime_sh_refs_dynamic_develop_985_11.03.2015.ITS2.fasta -strand plus -chimeras lotus2_results/ExtraFiles//chimeras_ref.fa -nonchimeras lotus2_results/tmpFiles//otu_seeds.fna.tmp.fa -threads 1 -log lotus2_results/LotuSLogS//uchime_refdb.log
+[cmd] rm -f lotus2_results/tmpFiles//otu_seeds.fna
+[cmd]  mv lotus2_results/tmpFiles//otu_seeds.fna.tmp.fa lotus2_results/tmpFiles//otu_seeds.fna
+[cmd] mkdir -p lotus2_results/tmpFiles//itsx/
+[cmd] perl /workspace/conda/envs/lotus2/bin/ITSx -i lotus2_results/tmpFiles//otu_seeds.fna -o lotus2_results/tmpFiles//otu_seeds.fna.itsX --cpu 1 --multi_thread T --heuristics T -t F --silent T --fasta T --nhmmer F --save_regions ITS1,ITS2 --partial 0 --hmmBin /workspace/conda/envs/lotus2/bin/hmmscan --preserve T
+[cmd] cp lotus2_results/tmpFiles//otu_seeds.fna.itsX.summary.txt lotus2_results/LotuSLogS//ITSx.summary.txt
+
+[cmd] cat lotus2_results/tmpFiles//otu_seeds.fna.itsX.ITS1.fasta lotus2_results/tmpFiles//otu_seeds.fna.itsX.ITS2.fasta >> lotus2_results/tmpFiles//otu_seeds.fna.itsX.full.fasta
+[cmd] rm -f lotus2_results/tmpFiles//otu_seeds.fna.itsX*
+[cmd] /workspace/conda/envs/lotus2/bin/minimap2   -x sr --sr -u both --secondary=no -N 30 -c  -t 1 -o lotus2_results/tmpFiles//otu_seeds.fna.phiX.0.cont_hit.paf /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//phiX.fasta lotus2_results/tmpFiles//otu_seeds.fna
+[cmd] cp lotus2_results/tmpFiles//otu_seeds.fna lotus2_results/OTU.fna
+[cmd] /workspace/conda/envs/lotus2/bin/makeblastdb -in /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta -dbtype 'nucl'
+[cmd] /workspace/conda/envs/lotus2/bin/blastn -query lotus2_results/OTU.fna -db /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_refs_qiime_ver8_99_s_all_02.02.2019.fasta -out lotus2_results/tmpFiles//tax.0.blast -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send qlen' -max_target_seqs 200 -perc_identity 75 -num_threads 1 -strand both 
+[cmd] cp lotus2_results/tmpFiles//tax.0.blast lotus2_results/ExtraFiles//
+[cmd] /workspace/conda/envs/lotus2/bin/LCA  -i lotus2_results/tmpFiles//tax.0.blast -r /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//UNITE/sh_taxonomy_qiime_ver8_99_s_all_02.02.2019.txt -o lotus2_results/hiera_BLAST.txt  -LCAfrac 0.8  -cover 0.5 -minAlignLen 70 -id 97,95,93,91,88,78,0
+[cmd] mkdir -p lotus2_results/higherLvl/
+[cmd] cp lotus2_results/OTU.txt lotus2_results/higherLvl/
+[cmd] /workspace/conda/envs/lotus2/bin/mafft --thread 1 --quiet lotus2_results/OTU.fna > lotus2_results/ExtraFiles//OTU.MSA.fna
+[cmd] /workspace/conda/envs/lotus2/bin/FastTreeMP -nt -gtr -no2nd -spr 4 -log lotus2_results/LotuSLogS//fasttree.log -quiet -out lotus2_results/OTUphylo.nwk lotus2_results/ExtraFiles//OTU.MSA.fna
+[cmd] /workspace/conda/envs/lotus2/bin/Rscript  --vanilla  /workspace/conda/envs/lotus2/share/lotus2-2.25-0/bin/R/l2phyloseq.R lotus2_results/OTU.txt lotus2_results/hiera_BLAST.txt lotus2_results/primary/in.map 1 lotus2_results/OTUphylo.nwk
+[cmd] rm -rf lotus2_results/tmpFiles/

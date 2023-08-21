@@ -1,0 +1,168 @@
+vsearch v2.23.0_linux_x86_64, 62.8GB RAM, 16 cores
+/workspace/conda/envs/lotus2/bin/vsearch -uchime_ref lotus2_results/tmpFiles//otu_seeds.fna -db /workspace/conda/envs/lotus2/share/lotus2-2.25-0//DB//ITS_chimera/ITS1_ITS2_datasets/uchime_sh_refs_dynamic_develop_985_11.03.2015.ITS2.fasta -strand plus -chimeras lotus2_results/ExtraFiles//chimeras_ref.fa -nonchimeras lotus2_results/tmpFiles//otu_seeds.fna.tmp.fa -threads 1 -log lotus2_results/LotuSLogS//uchime_refdb.log
+Started  Mon Aug 21 10:27:07 2023
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 12676.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 12864.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 14516.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 14516.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 14518.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 14518.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 17298.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19552.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19552.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 151 (0x97) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 151 (0x97) on or right before line 19554.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 19556.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21194.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 21196.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 37290.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 182 (0xb6) on or right before line 43254.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 195 (0xc3) on or right before line 43888.
+
+WARNING: Non-ASCII character encountered in FASTA/FASTQ header.
+Character no 171 (0xab) on or right before line 43888.
+4834733 nt in 22108 seqs, min 80, max 1353, avg 219
+
+    0.28  minh
+    8.00  xn
+    1.40  dn
+    1.00  xa
+    0.80  mindiv
+    0.55  id
+       2  maxp
+
+lotus2_results/tmpFiles//otu_seeds.fna: 13/2207 chimeras (0.6%)
+
+Finished Mon Aug 21 10:27:10 2023
+Elapsed time 00:03
+Max memory 46.1MB
